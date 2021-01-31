@@ -32,7 +32,7 @@ var coord = earthquakeData.map(d=> d.geometry.coordinates)
 var magnit = earthquakeData.map(d=> +d.properties.mag)
 var magnit4radius = magnit.map(d=> d * 100000)
 var colorGradient = []
-colorGradient = magnit.map(d=> getColor(d));
+colorGradient.push(magnit.map(d=> getColor(d)));
 
 console.log(coord)
 console.log(magnit)
